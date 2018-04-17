@@ -1,0 +1,58 @@
+[System]
+Name='reglasfuzzyfinal'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=3
+NumRules=2
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='caudallEtrada(q)'
+Range=[0 160]
+NumMFs=3
+MF1='IDEAL':'gaussmf',[5 82]
+MF2='BAJO':'trapmf',[0 0 77 97]
+MF3='ALTO':'trapmf',[67 87 160 160]
+
+[Input2]
+Name='caudalChaqueta(qc)'
+Range=[0 200]
+NumMFs=3
+MF1='IDEAL':'gaussmf',[5 105]
+MF2='BAJO':'trapmf',[0 0 100 120]
+MF3='ALTO':'trapmf',[90 110 200 200]
+
+[Output1]
+Name='Temperatura'
+Range=[0 700]
+NumMFs=7
+MF1='MediBajo':'trapmf',[30 90 190 250]
+MF2='IDEAL':'trimf',[300 350 400]
+MF3='MuyAlto':'trapmf',[580 640 700 700]
+MF4='MuyBajo':'trapmf',[0 0 60 120]
+MF5='LigeraBajo':'trapmf',[160 220 320 380]
+MF6='LigeraAlto':'trapmf',[320 380 480 540]
+MF7='MedioAlto':'trapmf',[450 510 610 670]
+
+[Output2]
+Name='Volumen'
+Range=[0 120]
+NumMFs=3
+MF1='ALTO':'trapmf',[13.89 16.89 120 120]
+MF2='IDEAL':'trimf',[10.89 13.89 16.89]
+MF3='BAJO':'trapmf',[0 0 10.89 20.89]
+
+[Output3]
+Name='Concentracion'
+Range=[0 1.5]
+NumMFs=1
+MF1='IDEAL':'smf',[0.92 0.9951]
+
+[Rules]
+1 1, 2 2 1 (1) : 1
+2 1, 6 2 -1 (1) : 1
