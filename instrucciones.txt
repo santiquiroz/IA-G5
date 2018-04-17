@@ -1,0 +1,2 @@
+para ejecutar el programa hay que abrir la carpeta en matlab 
+y ejecutar el archivo reactor.m que esta en la carpeta principal.

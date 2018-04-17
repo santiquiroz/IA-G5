@@ -77,16 +77,19 @@ varargout{1} = handles.output;
 function pushbutton1_Callback(hObject, eventdata, handles)
 %executes the traditional reactor simulation 
 %load('.\realtime_pacer_lib.mdl',realtime_pacer_lib.mdl)
-open('.\Simulink_2-pid\cstr_pid.slx')
-sim('.\Simulink_2-pid\cstr_pid.slx')
-
+%open('.\Simulink_2-pid\cstr_pid.slx')
+%sim('.\Simulink_2-pid\cstr_pid.slx')
+open('.\Simulink_Base\TanqueBase.slx')
+sim('.\Simulink_Base\TanqueBase.slx')
 
 % --- Executes on button press in pushbutton2.
 function pushbutton2_Callback(hObject, eventdata, handles)
 % executes the fuzzy oriented simulation
 %load('.\realtime_pacer_lib.mdl',realtime_pacer_lib.mdl)
-open('.\Simulink_3-fuzzy\cstr_pid.slx')
-sim('.\Simulink_3-fuzzy\cstr_pid.slx')
+%open('.\Simulink_3-fuzzy\cstr_pid.slx')
+%sim('.\Simulink_3-fuzzy\cstr_pid.slx')
+open('.\Simulink_Base\TanqueFuzzy.slx')
+sim('.\Simulink_Base\TanqueFuzzy.slx')
 
 
 % --- Executes on button press in pushbutton3.
