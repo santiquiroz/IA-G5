@@ -12,8 +12,8 @@ Primera Parte: (En Matlab):\
   +Se ejecutan los archivos necesarios para la simulacion del sistema y se generan los datos para el aprendizaje de maquina.  
   
 Segunda Parte: (En Graphlab):  
-  +Se importan los datos, se crea una Red Neuronal, se incicia el aprendisaje de la misma y se valida dicho aprendizaje.  
+  +Se importan los datos, se crea una Red Neuronal, se clasifican los datos segun los parametros del experto. Luego se incicia el aprendizaje de la misma, para entergar dichos datos a la red Fuzzy.  
   +Se crean las Reglas Fuzzy para el control del sistema.  
-  +Se generan Nuevos datos aleatorios que funcionan como perturbaciones del sistema.  
-  +Se implementa el servicio Multiagente de Request-Response.  
-  +Se grafican los resultados  
+  +Se leen Nuevos datos aleatorios que funcionan como perturbaciones del sistema.  
+  +Se implementa el servicio Multiagente de Send-Recive para la comunicacion entre los agentes, uno con comportamiento one shot y el otro event beheavior.  
+ 
