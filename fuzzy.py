@@ -70,11 +70,11 @@ conc = ctrl.ControlSystemSimulation(conc_ctrl)
 # Pass inputs to the ControlSystem using Antecedent labels with Pythonic API
 # Note: if you like passing many inputs all at once, use .inputs(dict_of_data)
 
-caudal1 = elements[1]
-caudal2 = elements[2]
+caudal1 = int(elements[1])
+caudal2 = int(elements[2])
 
-vol.input['caudalE'] = int(caudal1)
-vol.input['caudalCh'] = int(caudal2)
+vol.input['caudalE'] = caudal1
+vol.input['caudalCh'] = caudal2
 
 vol.compute()
 
